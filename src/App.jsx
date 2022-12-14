@@ -1,10 +1,14 @@
-
+import NavBar from "./components/NavBar/NavBar";
+import Hero from "./components/Hero/Hero";
 
 const App = () => {
+
+
   return (
-    <div>
-      <h1>_nology react punk api</h1>
-    </div>
+    <>
+      <NavBar />
+      <Hero />
+    </>
   );
 }
 
