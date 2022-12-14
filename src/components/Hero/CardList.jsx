@@ -4,8 +4,10 @@ const CardList = () => {
 
     return (
 
-        <div>
-            <h1>Content for cards in hero section</h1>
+        <div className="card-content">
+            <h1>dummy data</h1>
+            <p>card title </p>
+            <p>card description</p>
         </div>
     );
 };

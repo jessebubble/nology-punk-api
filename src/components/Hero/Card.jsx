@@ -1,9 +1,12 @@
+import CardList from "./CardList";
 
 const Card = () => {
 
     return (
-        <div>
-            <h1>Cards in hero section</h1>
+        <div className="card">
+            <h1>
+                <CardList />
+            </h1>
         </div>
     );
 };

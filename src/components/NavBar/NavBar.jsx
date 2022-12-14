@@ -4,13 +4,19 @@ import SearchBox from "./SearchBox";
 
 const NavBar = () => {
     return (
-        <div className="navbar">
-            <h1>nav sidebar</h1>
-            <SearchBox />
-            <FilterItem />
-            <FilterList />
-
-        </div>
+        <>
+            <div className="navbar">
+                <div className="navbar-logo">
+                    <h3>placeholder</h3>
+                </div>
+            
+                <div className="navbar-content">
+                    <SearchBox />
+                    <FilterItem />
+                    <FilterList />
+                </div>
+            </div>
+        </>
     );
 };
 

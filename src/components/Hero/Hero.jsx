@@ -1,17 +1,21 @@
 import Card from "./Card";
-import CardList from "./CardList";
 
 const Hero = () => {
 
 
   return (
-    
-    <div className="hero">
-      <h1 className="hero__title">Hero Section</h1>
-      <Card />
-      <CardList />
-    </div>
-    
+    <>
+      <div className="hero">
+        <div className="hero-text">
+          <h1>Hero Section</h1>
+          <p>Hero section description</p>
+        </div>
+
+        <div className="hero-card">
+          <Card />
+        </div>
+      </div>
+    </>
   );
 }
 

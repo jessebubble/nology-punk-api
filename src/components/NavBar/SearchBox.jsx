@@ -3,8 +3,11 @@ const SearchBox = () => {
 
     return (
 
-        <div>
-            <h1>This is the Searchbox</h1>
+        <div className="searchbox">
+            <form>
+                <input type="text" placeholder="Find your beer" />
+                <button type="submit">Search</button>
+            </form>
         </div>
 
     );

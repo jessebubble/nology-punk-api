@@ -2,8 +2,11 @@
 const FilterItem = () => {
 
     return (
-        <div>
-            <h1>Filter Box</h1>
+        <div className="filterbox">
+            <form>
+                <input type="checkbox" />
+                <label>Filter beer search</label>
+            </form>
         </div>
     );
 };

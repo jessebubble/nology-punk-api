@@ -6,8 +6,10 @@ const App = () => {
 
   return (
     <>
+    <div className="landing-page">
       <NavBar />
       <Hero />
+    </div>
     </>
   );
 }
