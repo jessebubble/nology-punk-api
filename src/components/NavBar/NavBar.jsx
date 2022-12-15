@@ -1,19 +1,16 @@
-import FilterItem from "./FilterItem";
-import FilterList from "./FilterList";
 import SearchBox from "./SearchBox";
 
-const NavBar = () => {
+const NavBar = (props) => {
     return (
         <>
             <div className="navbar">
                 <div className="navbar-logo">
-                    <h3>placeholder</h3>
+                    <h1>_nology</h1>
+                    <p> powered by Punk API </p>
                 </div>
             
                 <div className="navbar-content">
-                    <SearchBox />
-                    <FilterItem />
-                    <FilterList />
+                    <SearchBox name="name" />
                 </div>
             </div>
         </>

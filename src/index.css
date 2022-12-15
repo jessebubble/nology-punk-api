@@ -30,12 +30,19 @@
   gap: 10px;
   padding: 10px;
 }
-.navbar-logo {
-  background-color: #ffbb10ff;
-  border-radius: 5px;
-  width: 100%;
-  padding: 10px;
+.navbar-logo > h1 {
+  color: #fff;
+  font-size: 32px;
+  font-weight: bold;
   text-align: center;
+  margin-bottom: 1px;
+}
+.navbar-logo > p {
+  color: #979797;
+  font-size: 10px;
+  font-weight: medium;
+  text-align: center;
+  margin-bottom: 10px;
 }
 .navbar-content {
   display: flex;
@@ -43,8 +50,10 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin-top: 10px;
-  gap: 10px;
+  padding: 10px;
+}
+.searchbox {
+  width: 100%;
 }
 .searchbox > form {
   display: flex;
@@ -74,6 +83,28 @@
 .searchbox > form > button:hover {
   background-color: #ffbb10ff;
   color: #fff;
+}
+.searchbox-results {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 5px;
+}
+.searchbox-results > p {
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+}
+.filterbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
 }
 .filterbox > form > label {
   color: #fff;
@@ -106,31 +137,19 @@
   gap: 10px;
   padding: 10px;
 }
-.hero > .hero-text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-  padding: 10px;
-}
-.hero > .hero-text > h1 {
-  color: #fff;
-  font-size: 36px;
-  font-weight: bold;
-  text-align: center;
-}
-.hero > .hero-text > p {
-  color: #dddddd;
-  font-size: 16px;
-  text-align: center;
-}
 .hero > .hero-card {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
   padding: 10px;
+}
+.hero > .hero-logo > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 10px;
+  margin-top: 10px;
 }
 .card {
   background-color: #fff;
@@ -149,4 +168,30 @@
   justify-content: center;
   gap: 5px;
   padding: 10px;
+}
+
+/* media query iphone */
+@media screen and (max-width: 768px) {
+  .landing-page {
+    flex-direction: column;
+  }
+  .navbar {
+    width: 100%;
+  }
+  .hero {
+    width: 100%;
+  }
+}
+
+/* media query ipad */
+@media screen and (max-width: 1024px) {
+  .landing-page {
+    flex-direction: column;
+  }
+  .navbar {
+    width: 100%;
+  }
+  .hero {
+    width: 100%;
+  }
 }

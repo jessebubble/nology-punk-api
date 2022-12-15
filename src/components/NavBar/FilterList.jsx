@@ -1,23 +1,30 @@
 
-const FilterList = () => {
+const FilterList = (props) => {
+
+    if (!props.show) {
+        return props.show
+    };
 
     return (
-
         <div className="filterlist">
-            <h3>Filter dropdown List</h3>
-
             <form>
                 <input type="checkbox" />
-                <label>Filter option 1</label>
+                <label>The Classics</label>
                 <br />
 
                 <input type="checkbox" />
-                <label>Filter option 2</label>
+                <label>Citrus Love </label>
                 <br />
 
                 <input type="checkbox" />
-                <label>Filter option 3</label>
+                <label>More abv please</label>
             </form>
+            
+            <div className="filtered-results" >     
+                <p>
+                    filtered results here
+                </p>
+            </div>
         </div>
     );
 };
