@@ -169,6 +169,9 @@
   gap: 5px;
   padding: 10px;
 }
+.hideCard {
+  display: none;
+}
 
 /* media query iphone */
 @media screen and (max-width: 768px) {

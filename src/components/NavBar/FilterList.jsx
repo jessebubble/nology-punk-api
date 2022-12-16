@@ -1,8 +1,8 @@
 
 const FilterList = (props) => {
 
-    if (!props.show) {
-        return props.show
+    if (!props.showList) {
+        return props.showList
     };
 
     return (

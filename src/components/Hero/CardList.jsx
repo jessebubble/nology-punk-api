@@ -1,17 +1,12 @@
 
-
-const CardList = (props) => {
+const CardList = () => {
 
     return (
 
         <div className="card-content">
-            <h1>
-                {props.name}
-            </h1>
-            <p>
-                {props.description}
-            </p>
-            <p>card description</p>
+           <h1>
+                dummy card
+           </h1>
         </div>
     );
 };

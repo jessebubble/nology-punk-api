@@ -3,10 +3,8 @@ import CardList from "./CardList";
 const Card = () => {
 
     return (
-        <div className="card">
-            <h1>
-                <CardList />
-            </h1>
+        <div className="card" >
+            <CardList image="image" title="title" description="description"/>
         </div>
     );
 };

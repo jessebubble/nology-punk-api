@@ -1,6 +1,9 @@
 import SearchBox from "./SearchBox";
 
 const NavBar = (props) => {
+
+    const { searchResults, handleChange } = props;
+      
     return (
         <>
             <div className="navbar">
@@ -10,7 +13,10 @@ const NavBar = (props) => {
                 </div>
             
                 <div className="navbar-content">
-                    <SearchBox name="name" />
+                    <SearchBox 
+                        handleChange={handleChange}
+                        searchResults={searchResults}
+                    />
                 </div>
             </div>
         </>

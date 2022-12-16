@@ -1,7 +1,7 @@
 import Card from "./Card";
 
-const Hero = () => {
-
+const Hero = (searchResults, showResults, setShowResults, handleChange, beerDetails) => {
+  
 
   return (
     <>

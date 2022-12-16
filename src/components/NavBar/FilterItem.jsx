@@ -20,7 +20,7 @@ const FilterItem = (props) => {
                 <label>Filter beer search</label>
             </form>
         </div>
-        <FilterList show={showList} />
+        <FilterList showList={showList} />
         </>
     );
 };
