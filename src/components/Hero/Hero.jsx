@@ -1,13 +1,18 @@
 import Card from "./Card";
 
-const Hero = (searchResults, showResults, setShowResults, handleChange, beerDetails) => {
-  
+const Hero = (props) => {
+
+  const { showCardDetails, handleChange, showCard} = props;
+
+  if (handleChange) {
+    return showCardDetails;
+  }
 
   return (
     <>
       <div className="hero">
         <div className="hero-card">
-          <Card />
+          <Card showCard={showCard}/>
         </div>
         
         <div className="hero-logo">

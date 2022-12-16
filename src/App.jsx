@@ -5,7 +5,7 @@ import { useState } from "react";
 
 const App = (props) => {
   const [searchResults, setSearchResults] = useState([]);
-  const [showResults, setShowResults] = useState(false);
+  const [showCard, setShowCard] = useState(false);
 
   const handleChange = (event) => {
     const searchValue = event.target.value;
@@ -13,17 +13,23 @@ const App = (props) => {
       return beer.name.toLowerCase().includes(searchValue.toLowerCase());
     });
     setSearchResults(filteredBeers);
-    setShowResults(true);
+    setShowCard(true);
   };
 
-  const beerDetails = beers.map((beer) => {
-    return {
-      description: beer.description,
-      image_url: beer.image_url,
-      name: beer.name,
-      first_brewed: beer.first_brewed,
-      abv: beer.abv,
-    };
+  const showCardDetails = searchResults.map((beer) => {
+    return ( 
+      <div className="card" key={beer.id}>
+        <div className="card-image">
+          <img src={beer.image_url} alt={beer.name} />
+          <div className="card-content">
+            <h2>{beer.name}</h2>
+            <p>{beer.tagline}</p>
+            <p>{beer.description}</p>
+            <p>{beer.abv}</p>
+          </div>
+        </div>
+      </div>
+    );
   });
 
   return (
@@ -34,11 +40,9 @@ const App = (props) => {
           handleChange={handleChange}
         />
         <Hero 
-          searchResults={searchResults} 
-          showResults={showResults} 
-          setShowResults={setShowResults} 
-          handleChange={handleChange} 
-          beerDetails={beerDetails}
+          showCardDetails={showCardDetails} 
+          showCard={showCard} 
+          handleChange={handleChange}
         />
       </div>
     </>

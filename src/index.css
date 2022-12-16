@@ -161,16 +161,19 @@
   gap: 10px;
   padding: 10px;
 }
-.card-content {
+.card > img {
+  width: 30%;
+  height: 30%;
+  object-fit: contain;
+  padding: 10px;
+}
+.card > .card-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 5px;
   padding: 10px;
-}
-.hideCard {
-  display: none;
 }
 
 /* media query iphone */
