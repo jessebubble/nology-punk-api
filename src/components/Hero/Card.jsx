@@ -1,15 +1,18 @@
 import CardList from "./CardList";
 
 const Card = (props) => {
+    const { showCardDetails, handleChange} = props;
 
-    const { showCardDetails } = props;
-
+    if (!handleChange) {
+      return showCardDetails;
+    } else {
 
     return (
-        <div className="card">
+        <div className="">
             <CardList showCardDetails={showCardDetails} />
         </div>
     );
 };
+}
 
 export default Card;

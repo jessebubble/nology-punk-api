@@ -3,7 +3,7 @@ const CardList = (props) => {
     const { showCardDetails  } = props;  
 
     return (
-        <div className="card-content">
+        <div className="">
             {showCardDetails}
         </div>
     );

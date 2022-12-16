@@ -9,26 +9,19 @@
 
 .landing-page {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #303030;
-  padding: 10px;
-  gap: 10px;
 }
 .navbar {
-  width: 20%;
-  height: 100%;
+  width: 25%;
+  max-height: 100vh;
   background-color: #202020;
-  box-shadow: 0 0 5px #ffbb10ff;
-  border-radius: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   gap: 10px;
-  padding: 10px;
+  padding: 30px;
 }
 .navbar-logo > h1 {
   color: #fff;
@@ -38,18 +31,18 @@
   margin-bottom: 1px;
 }
 .navbar-logo > p {
-  color: #979797;
+  color: #ffbb10ff;
   font-size: 10px;
   font-weight: medium;
   text-align: center;
   margin-bottom: 10px;
 }
 .navbar-content {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
   padding: 10px;
 }
 .searchbox {
@@ -58,31 +51,17 @@
 .searchbox > form {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
 }
 .searchbox > form > input {
   border: none;
   border-radius: 5px;
   padding: 10px;
   outline: none;
-  width: 60%;
+  width: 100%;
 }
 .searchbox > form > input::placeholder {
   color: #979797;
-}
-.searchbox > form > button {
-  border: 1px solid #ffbb10ff;
-  border-radius: 5px;
-  padding: 10px;
-  color: #303030;
-  background-color: #fff;
-  font-weight: bold;
-  cursor: pointer;
-  width: 30%;
-}
-.searchbox > form > button:hover {
-  background-color: #ffbb10ff;
-  color: #fff;
 }
 .searchbox-results {
   display: flex;
@@ -90,7 +69,7 @@
   align-items: flex-start;
   justify-content: center;
   padding: 10px;
-  border-radius: 5px;
+  width: 100%;
 }
 .searchbox-results > p {
   color: #fff;
@@ -128,52 +107,70 @@
 }
 
 .hero {
-  width: 80%;
-  height: 100%;
+  width: 100%;
+  height: 100vh;
   background-color: #202020;
-  border-radius: 5px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding: 10px;
-}
-.hero > .hero-card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
   padding: 10px;
 }
 .hero > .hero-logo > img {
   width: 100%;
   height: 100%;
+  aspect-ratio: 6/2;
   object-fit: contain;
-  padding: 10px;
-  margin-top: 10px;
+  margin-top: -60px;
 }
 .card {
-  background-color: #fff;
+  width: 100%;
+  margin-top: -50px;
+  background-color: #202020;
   border-radius: 5px;
+  border: 1px solid #ffbb10ff;
+  padding: 10px;
+}
+.card-content {
+  width: 100%;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  padding: 10px;
   gap: 10px;
-  padding: 10px;
 }
-.card > img {
-  width: 30%;
-  height: 30%;
+.card-image > img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 3/2;
   object-fit: contain;
-  padding: 10px;
 }
-.card > .card-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-  padding: 10px;
+.card-text > h1 {
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 1px;
+}
+.card-text > h1 >span {
+  color: #ffbb10ff;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 1px;
+  padding: 5px;
+}
+.card-text > h3 {
+  color: #dddddd;
+  font-size: 14px;
+  font-weight: medium;
+  margin-bottom: 1px;
+}
+.card-text > p {
+  color: #979797;
+  font-size: 14px;
+  font-weight: medium;
+}
+.card-text > p > span {
+  color: #ffbb10ff;
+  font-size: 14px;
+  font-weight: medium;
 }
 
 /* media query iphone */

@@ -1,26 +1,20 @@
-import Card from "./Card";
+import Card from '../Hero/Card';
 
 const Hero = (props) => {
+    const { showCardDetails, handleChange } = props;
 
-  const { showCardDetails, handleChange, showCard} = props;
-
-  if (handleChange) {
-    return showCardDetails;
+    return (
+      <>
+        <div className="hero">
+          <div className="hero-logo">
+            <img src="./logo.png" alt="logo" />
+          </div>
+          <div className ="">
+            <Card showCardDetails={showCardDetails} handleChange={handleChange} />
+          </div>
+        </div>
+      </>
+    );
   }
-
-  return (
-    <>
-      <div className="hero">
-        <div className="hero-card">
-          <Card showCard={showCard}/>
-        </div>
-        
-        <div className="hero-logo">
-          <img src="./logo.png" alt="logo" />
-        </div>
-      </div>
-    </>
-  );
-}
 
 export default Hero;

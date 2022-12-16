@@ -1,15 +1,15 @@
 import FilterItem from "./FilterItem";
 
 const SearchBox = (props) => {
-    const { searchResults, handleChange, handleClick } = props;
+    const { searchResults, handleChange } = props;
     
     return (
         <div className="searchbox">
             <form>
                 <input type="text" placeholder="Find your beer" onChange={handleChange} />
-                <button type="submit" onClick={handleClick}>
+               {/*  <button type="submit" onClick={handleClick}>
                     Search
-                </button>
+                </button> */}
             </form>  
 
             <FilterItem />
