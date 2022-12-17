@@ -21,6 +21,38 @@ const App = (props) => {
     });
   };
 
+  const getCardList = () => {
+    fetch (`https://api.punkapi.com/v2/beers`)
+    .then((data) => {           
+        return data.json();
+    })
+    .then((returnedBeerData) => {
+        return returnedBeerData.map((beerContent) => {
+            const { id, name, image_url, tagline, description, abv, first_brewed } = beerContent;
+            return (    
+                <div className="card">
+                    <div className="card-content" key={id}>
+                        <div className="card-image">
+                            <img src={image_url} alt={name} />
+                        </div>
+                        <div className="card-text">
+                            <h1>
+                                {name} <span> {abv} abv</span>
+                            </h1>
+                            <h3>{tagline}</h3>
+                            <p>
+                                {description}
+                                <br />
+                                <span>Brewed since {first_brewed}</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            );
+        });
+    });
+};
+
   return (
     <>
       <div className="landing-page">
@@ -32,6 +64,7 @@ const App = (props) => {
           showCard={showCard} 
           setShowCard={setShowCard}
           handleChange={handleChange}
+          getCardList={getCardList()}
         />
       </div>
     </>
