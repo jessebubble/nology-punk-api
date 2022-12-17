@@ -2,7 +2,7 @@ import SearchBox from "./SearchBox";
 
 const NavBar = (props) => {
 
-    const { searchResults, handleChange, handleClick } = props;
+    const { searchResults, handleChange } = props;
       
     return (
         <>
@@ -16,7 +16,6 @@ const NavBar = (props) => {
                     <SearchBox 
                         searchResults={searchResults}
                         handleChange={handleChange}
-                        handleClick={handleClick}
                     />
                 </div>
             </div>

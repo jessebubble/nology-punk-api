@@ -1,6 +1,5 @@
 import NavBar from "./components/NavBar/NavBar";
 import Hero from "./components/Hero/Hero";
-import beers from "./data/beer";
 import { useState } from "react";
 
 const App = (props) => {
@@ -9,37 +8,18 @@ const App = (props) => {
 
   const handleChange = (event) => {
     const searchValue = event.target.value;
-    const filteredBeers = beers.filter((beer) => {
-      return beer.name.toLowerCase().includes(searchValue.toLowerCase());
+    fetch (`https://api.punkapi.com/v2/beers`)
+    .then((res) => {
+      return res.json();
+    })
+    .then((returnedData) => {
+      const filterData = returnedData.filter((beer) => {
+        return beer.name.toLowerCase().includes(searchValue.toLowerCase());
+      });
+        setSearchResults(filterData);
+        setShowCard(true);
     });
-    setSearchResults(filteredBeers);
-    setShowCard(true);
   };
-
-  const showCardDetails = searchResults.map((beer) => {
-    return ( 
-      <>
-      <div className="card">
-      <div className="card-content" key={beer.id}>
-          <div className="card-image">
-            <img src={beer.image_url} alt={beer.name} />
-          </div>
-          <div className="card-text">
-            <h1>
-              {beer.name} <span> {beer.abv} abv</span>
-            </h1>
-            <h3>{beer.tagline}</h3>
-            <p>
-              {beer.description}
-              <br />
-              <span>Brewed since {beer.first_brewed}</span>
-            </p>
-          </div>
-      </div>
-      </div>
-      </>
-    );
-  });
 
   return (
     <>
@@ -49,8 +29,8 @@ const App = (props) => {
           handleChange={handleChange}
         />
         <Hero 
-          showCardDetails={showCardDetails} 
           showCard={showCard} 
+          setShowCard={setShowCard}
           handleChange={handleChange}
         />
       </div>

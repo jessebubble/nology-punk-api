@@ -1,7 +1,7 @@
 import Card from '../Hero/Card';
 
 const Hero = (props) => {
-    const { showCardDetails, handleChange } = props;
+    const { handleChange } = props;
 
     return (
       <>
@@ -10,7 +10,7 @@ const Hero = (props) => {
             <img src="./logo.png" alt="logo" />
           </div>
           <div className ="">
-            <Card showCardDetails={showCardDetails} handleChange={handleChange} />
+            <Card handleChange={handleChange} />
           </div>
         </div>
       </>
