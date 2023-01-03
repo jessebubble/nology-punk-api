@@ -22,8 +22,10 @@ const NavBar = (props) => {
         <>
             <div className="navbar">
                 <div className="navbar-logo">
-                    <h1>_nology</h1>
-                    <p> powered by Punk API </p>
+                    <a href="/">
+                      <h1>_nology</h1>
+                      <p> powered by Punk API </p>
+                    </a>
                 </div>
                 <div className="navbar-content">
                     <SearchBox searchEvent={searchEvent}/>

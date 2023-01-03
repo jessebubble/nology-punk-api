@@ -23,14 +23,18 @@
   gap: 10px;
   padding: 30px;
 }
-.navbar-logo > h1 {
+.navbar-logo > a {
+  text-decoration: none;
+
+}
+.navbar-logo > a > h1 {
   color: #fff;
   font-size: 32px;
   font-weight: bold;
   text-align: center;
   margin-bottom: 1px;
 }
-.navbar-logo > p {
+.navbar-logo > a > p {
   color: #ffbb10ff;
   font-size: 10px;
   font-weight: medium;
@@ -63,39 +67,13 @@
 .searchbox > form > input::placeholder {
   color: #979797;
 }
-.searchbox-results  {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 10px;
-  width: 100%;
-}
-.searchbox-results > ul {
-  list-style: none;
-}
-.searchbox-results > ul > li {
-  padding: 10px;
-  cursor: pointer;
-}
-.searchbox-results > ul > li > h1 {
-  color: #fff;
-  font-size: 12px;
-  font-weight: medium;
-  margin-bottom: 1px;
-}
-.searchbox-results > ul > li > p {
-  color: #ffbb10ff;
-  font-size: 10px;
-  font-weight: medium;
-  margin-bottom: 1px;
-}
 .filterbox {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 10px;
+  gap : 10px;
 }
 .filterbox > form > label {
   color: #fff;
@@ -139,7 +117,6 @@
   padding: 10px;
   display: flex;
 }
-
 .card > .card-content {
   width: 100%;
   display: flex;

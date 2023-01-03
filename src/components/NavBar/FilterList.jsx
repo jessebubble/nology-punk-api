@@ -13,11 +13,45 @@ const FilterList = (props) => {
                 <br />
 
                 <input type="checkbox" />
-                <label>Citrus Love </label>
+                <label>More abv please </label>
                 <br />
 
                 <input type="checkbox" />
-                <label>More abv please</label>
+                <label>Drink + Food combo</label>
+                <br />
+
+                <input type="checkbox" />
+                <label>Made with citrus</label>
+                <br />
+
+                <input type="checkbox" />
+                <label>Barrel aged</label>
+                <br />
+                
+                <input type="checkbox" />
+                <label>Belgian</label>
+                <br />
+
+                <input type="checkbox" />
+                <label>Stout</label>
+                <br />
+
+                <input type="checkbox" />
+                <label>Lager</label>
+                <br />
+
+                <input type="checkbox" />
+                <label>Low calorie</label>
+                <br />
+
+                <input type="checkbox" />
+                <label>non-alcholic</label>
+                <br />
+
+                <input type="checkbox" />
+                <label>Blonde</label>
+                <br />
+
             </form>
         </div>
     );
