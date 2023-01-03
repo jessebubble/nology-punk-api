@@ -19,12 +19,6 @@ const FilterList = (props) => {
                 <input type="checkbox" />
                 <label>More abv please</label>
             </form>
-            
-            <div className="filtered-results" >     
-                <p>
-                    filtered results here
-                </p>
-            </div>
         </div>
     );
 };

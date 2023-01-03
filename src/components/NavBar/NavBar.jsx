@@ -1,8 +1,22 @@
-import SearchBox from "./SearchBox";
+import SearchBox from "../SearchBox";
 
 const NavBar = (props) => {
 
-    const { searchResults, handleChange } = props;
+    const { setSearchResults } = props;
+
+    const searchEvent = (event) => {
+        const userSearch = event.target.value;
+        fetch (`https://api.punkapi.com/v2/beers`)
+        .then((res) => {
+          return res.json();
+        })
+        .then((returnedData) => {
+          const filterData = returnedData.filter((beer) => {
+            return beer.name.toLowerCase().includes(userSearch.toLowerCase());
+          });
+            setSearchResults(filterData);
+        });
+      };
       
     return (
         <>
@@ -11,12 +25,8 @@ const NavBar = (props) => {
                     <h1>_nology</h1>
                     <p> powered by Punk API </p>
                 </div>
-            
                 <div className="navbar-content">
-                    <SearchBox 
-                        searchResults={searchResults}
-                        handleChange={handleChange}
-                    />
+                    <SearchBox searchEvent={searchEvent}/>
                 </div>
             </div>
         </>

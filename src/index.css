@@ -14,7 +14,7 @@
 }
 .navbar {
   width: 25%;
-  max-height: 100vh;
+  max-height: 100%;
   background-color: #202020;
   display: flex;
   flex-direction: column;
@@ -63,7 +63,7 @@
 .searchbox > form > input::placeholder {
   color: #979797;
 }
-.searchbox-results {
+.searchbox-results  {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -71,12 +71,24 @@
   padding: 10px;
   width: 100%;
 }
-.searchbox-results > p {
+.searchbox-results > ul {
+  list-style: none;
+}
+.searchbox-results > ul > li {
+  padding: 10px;
+  cursor: pointer;
+}
+.searchbox-results > ul > li > h1 {
   color: #fff;
   font-size: 12px;
-  font-weight: bold;
-  text-align: center;
-  padding: 10px;
+  font-weight: medium;
+  margin-bottom: 1px;
+}
+.searchbox-results > ul > li > p {
+  color: #ffbb10ff;
+  font-size: 10px;
+  font-weight: medium;
+  margin-bottom: 1px;
 }
 .filterbox {
   display: flex;
@@ -108,7 +120,7 @@
 
 .hero {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: #202020;
   display: flex;
   flex-direction: column;
@@ -117,19 +129,18 @@
 .hero > .hero-logo > img {
   width: 100%;
   height: 100%;
-  aspect-ratio: 6/2;
   object-fit: contain;
-  margin-top: -60px;
 }
 .card {
   width: 100%;
-  margin-top: -50px;
   background-color: #202020;
   border-radius: 5px;
   border: 1px solid #ffbb10ff;
   padding: 10px;
+  display: flex;
 }
-.card-content {
+
+.card > .card-content {
   width: 100%;
   display: flex;
   align-items: center;
@@ -137,7 +148,7 @@
   padding: 10px;
   gap: 10px;
 }
-.card-image > img {
+.card > .card-content > .card-image > img {
   width: 100%;
   height: 100%;
   aspect-ratio: 3/2;
@@ -147,29 +158,36 @@
   color: #fff;
   font-size: 16px;
   font-weight: bold;
-  margin-bottom: 1px;
+  margin-bottom: 2px;
 }
 .card-text > h1 >span {
   color: #ffbb10ff;
   font-size: 16px;
   font-weight: bold;
-  margin-bottom: 1px;
+  margin-bottom: 2px;
   padding: 5px;
 }
 .card-text > h3 {
   color: #dddddd;
   font-size: 14px;
   font-weight: medium;
-  margin-bottom: 1px;
+  margin-bottom: 2px;
 }
 .card-text > p {
   color: #979797;
   font-size: 14px;
   font-weight: medium;
+  margin-bottom: 2px;
 }
 .card-text > p > span {
   color: #ffbb10ff;
   font-size: 14px;
+  font-weight: medium;
+  margin-bottom: 2px;
+}
+.card-text > p > .food {
+  color: #10ffff;
+  font-size: 13px;
   font-weight: medium;
 }
 
