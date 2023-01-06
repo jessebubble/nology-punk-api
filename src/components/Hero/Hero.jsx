@@ -6,6 +6,15 @@ const Hero = (props) => {
 
     return (
         <div className="hero">
+            <div className="hero-content">
+                <h1>PUNK API V2</h1>
+                <p>
+                    The Punk API takes Brewdog's DIY Dog and turns it into a searchable, filterable API that's completely free and open source. 
+                </p>
+                <button>
+                    Learn more about Punk API
+                </button>
+            </div>
             <div className="hero-logo">
                 <img src="./logo.png" alt="logo"/>
             </div>

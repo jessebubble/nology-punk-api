@@ -9,7 +9,7 @@ const FilterList = (props) => {
         <div className="filterlist">
             <form>
                 <input type="checkbox" />
-                <label>The Classics</label>
+                <label>New Releases</label>
                 <br />
 
                 <input type="checkbox" />
@@ -17,11 +17,11 @@ const FilterList = (props) => {
                 <br />
 
                 <input type="checkbox" />
-                <label>Drink + Food combo</label>
+                <label>Non-Alcoholic</label>
                 <br />
 
                 <input type="checkbox" />
-                <label>Made with citrus</label>
+                <label>Hazy</label>
                 <br />
 
                 <input type="checkbox" />
@@ -29,7 +29,7 @@ const FilterList = (props) => {
                 <br />
                 
                 <input type="checkbox" />
-                <label>Belgian</label>
+                <label>Sours</label>
                 <br />
 
                 <input type="checkbox" />
@@ -41,15 +41,18 @@ const FilterList = (props) => {
                 <br />
 
                 <input type="checkbox" />
-                <label>Low calorie</label>
+                <label>Belgium</label>
                 <br />
 
                 <input type="checkbox" />
-                <label>non-alcholic</label>
+                <label>Seltzer</label>
                 <br />
 
                 <input type="checkbox" />
                 <label>Blonde</label>
+                <br />
+                <input type="checkbox" />
+                <label>The Classics</label>
                 <br />
 
             </form>

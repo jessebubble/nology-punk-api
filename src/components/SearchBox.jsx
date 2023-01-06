@@ -1,4 +1,3 @@
-import FilterItem from './NavBar/FilterItem';
 const SearchBox = (props) => {
     const { searchEvent } = props;
 
@@ -9,7 +8,6 @@ const SearchBox = (props) => {
                 <input type="text" placeholder="Find your beer" onChange={searchEvent} />
             </form>  
         </div>
-        < FilterItem />
         </>
     );
 };

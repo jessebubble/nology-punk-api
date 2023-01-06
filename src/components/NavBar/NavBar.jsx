@@ -1,4 +1,6 @@
 import SearchBox from "../SearchBox";
+import FilterItem from "../NavBar/FilterItem";
+import FilterList from "../NavBar/FilterList";
 
 const NavBar = (props) => {
 
@@ -16,7 +18,7 @@ const NavBar = (props) => {
           });
             setSearchResults(filterData);
         });
-      };
+      };        
       
     return (
         <>
@@ -29,6 +31,8 @@ const NavBar = (props) => {
                 </div>
                 <div className="navbar-content">
                     <SearchBox searchEvent={searchEvent}/>
+                    <FilterItem />
+                    <FilterList />
                 </div>
             </div>
         </>
