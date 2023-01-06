@@ -10,17 +10,19 @@ const CardList = (props) => {
                     <div className="card-text">
                         <h1> 
                             {name} 
-                            <span>{abv}</span>
+                            <span>{abv} abv</span>
                         </h1>
 
-                        <h3>{tagline}</h3>
-                        <p>
-                            {description}
+                        <h3 className="tagline">
+                            {tagline}
                             <br />
-                            <span>{firstBrewed}</span>
+                            <span> {description}</span>
+                        </h3>
+                        <p className="brewdate">
+                            Brewed Since: <span>{firstBrewed}</span>
                         </p>
-                        <p>
-                            <span className="food">{foodPairing}</span>
+                        <p className="foodpairing">
+                            Goes well with: <span className="food">{foodPairing}</span>
                         </p>
                     </div>
                 </div>
