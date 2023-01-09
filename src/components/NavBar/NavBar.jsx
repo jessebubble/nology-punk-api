@@ -4,7 +4,7 @@ import FilterList from "../NavBar/FilterList";
 
 const NavBar = (props) => {
 
-    const { setSearchResults } = props;
+    const { setSearchResults, setFilterResults } = props;
 
     const searchEvent = (event) => {
         const userSearch = event.target.value;
@@ -18,7 +18,17 @@ const NavBar = (props) => {
           });
             setSearchResults(filterData);
         });
-      };        
+      };
+
+      const filterEvent = () => {
+        fetch (`https://api.punkapi.com/v2/beers?abv_gt=8&brewed_before=11-2010&brewed_after=04-2020&hops=hazy`)
+        .then((res) => {
+          return res.json();
+        })
+        .then((returnedData) => {
+            setFilterResults(returnedData);
+        });
+      };
       
     return (
         <>
@@ -32,7 +42,7 @@ const NavBar = (props) => {
                 <div className="navbar-content">
                     <SearchBox searchEvent={searchEvent}/>
                     <FilterItem />
-                    <FilterList />
+                    <FilterList filterEvent={filterEvent}/>
                 </div>
             </div>
         </>

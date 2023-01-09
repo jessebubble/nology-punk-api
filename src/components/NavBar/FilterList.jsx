@@ -1,9 +1,8 @@
-import { useState } from 'react';
-
+/* import { useState } from 'react'; */
 const FilterList = (props) => {
-    const [newReleases, setNewReleases] = useState(false);
+   /*  const [newReleases, setNewReleases] = useState(false);
     const [moreAbv, setMoreAbv] = useState(false);
-  /*   const [nonAlcoholic, setNonAlcoholic] = useState(false);
+    const [nonAlcoholic, setNonAlcoholic] = useState(false);
     const [seltzer, setSeltzer] = useState(false);
     const [hazy, setHazy] = useState(false);
     const [sours, setSours] = useState(false);
@@ -18,22 +17,16 @@ const FilterList = (props) => {
         return props.showList
     };
 
-    const handleNewReleases = () => {
-        setNewReleases(!newReleases);
-    };
-
-    const handleMoreAbv = () => {
-        setMoreAbv(!moreAbv);
-    };
+/*     const { filterEvent } = props; */
 
     return (
         <div className="filterlist">
             <form>
-                <input type="checkbox" onClick={handleNewReleases}/>
+                <input type="checkbox"  />
                 <label>New Releases</label>
                 <br />
 
-                <input type="checkbox" onClick={handleMoreAbv}/>
+                <input type="checkbox" />
                 <label>More abv please </label>
                 <br />
 
